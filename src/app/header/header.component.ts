@@ -7,9 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  imgSrc:string = "https://dummyimage.com/300/00ff48/ff0000.png&text=Image+Found"
+  constructor() { 
+  }
 
   ngOnInit(): void {
+
   }
 
 }
