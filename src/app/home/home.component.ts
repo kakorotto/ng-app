@@ -3,13 +3,31 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements OnInit {
+  peopleByCountry: any[] = [
+    {
+      country: 'UK',
+      people: [{ name: 'Douglas Pace' }, { name: 'Mcleod Mueller' }],
+    },
 
-  constructor() { }
+    {
+      country: 'US',
+      people: [
+        { name: 'Day Meyers' },
+        { name: 'Aguirre Ellis' },
+        { name: 'Cook Tyson' },
+      ],
+    },
 
-  ngOnInit(): void {
-  }
+    {
+      country: 'MARS',
+      people: [{ name: 'Douglas Pace' }, { name: 'Mcleod Mueller' }],
+    },
+  ];
 
+  constructor() {}
+
+  ngOnInit(): void {}
 }
