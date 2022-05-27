@@ -1,6 +1,10 @@
 <p>home works!</p>
 <ul>
-  <li *ngFor="let cotry of peopleByCountry"> {{cotry.country}}
+  <li *ngFor="let cotry of peopleByCountry" [ngSwitch]="cotry.country">
+    <div *ngSwitchCase="'UK'" class="text-danger">{{cotry.country}}</div>
+    <div *ngSwitchCase="'US'" class="text-danger">{{cotry.country}}</div>
+    <div *ngSwitchCase="'MARS'" class="text-success">{{cotry.country}}</div>
+    <div *ngSwitchDefault>{{cotry.country}}</div>
     <ul>
       <li *ngFor="let p of cotry.people"> {{p.name}}
       </li>
