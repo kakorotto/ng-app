@@ -1,1 +1,19 @@
-<p>todo-list works!</p>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <input type="text" #todo>
+      <input type="button" value="Add" (click)="add(todo)">
+    </div>
+    <div class="col-md-12">
+      <input type="text" #todoFilter>
+      <input type="button" value="Filter" (click)="like(todoFilter.value)">
+    </div>
+    <div class="col-md-12">
+      <ul>
+        <li *ngFor="let todo of filteredTodos">
+          {{ todo.name }}
+          <input type="button" value="Delete" (click)="delete(todo.id)">
+      </ul>
+    </div>
+  </div>
+</div>
