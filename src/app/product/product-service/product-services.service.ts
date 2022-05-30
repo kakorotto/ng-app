@@ -281,4 +281,8 @@ export class ProductServicesService {
   getProductById(id?: number) {
     return this.prods.find((prod) => prod.id == id);
   }
+
+  post(prod: IProduct) {
+    this.prods.push(prod);
+  }
 }

@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { AppRoutingModule } from './app-routing.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { HeaderContainerComponent } from './header-container/header-container.component';
@@ -18,6 +20,7 @@ import { UserDetailsComponent } from './user/user-details/user-details.component
 import { AllPhotosComponent } from './all-photos/all-photos.component';
 import { LoginComponent } from './login/login.component';
 import { AddProductComponent } from './product/add-product/add-product.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -39,7 +42,13 @@ import { AddProductComponent } from './product/add-product/add-product.component
     LoginComponent,
     AddProductComponent,
   ],
-  imports: [BrowserModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
