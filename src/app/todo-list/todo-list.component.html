@@ -6,13 +6,13 @@
     </div>
     <div class="col-md-12">
       <input type="text" #todoFilter>
-      <input type="button" value="Filter" (click)="like(todoFilter.value)">
+      <input type="button" value="Search" (click)="search(todoFilter.value)">
     </div>
     <div class="col-md-12">
       <ul>
         <li *ngFor="let todo of filteredTodos">
           {{ todo.name }}
-          <input type="button" value="Delete" (click)="delete(todo.id)">
+          <input type="button" value="complete" (click)="complete(todo.id)">
       </ul>
     </div>
   </div>
