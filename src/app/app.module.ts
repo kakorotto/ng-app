@@ -9,9 +9,12 @@ import { HomeComponent } from './home/home.component';
 import { AsideComponent } from './aside/aside.component';
 import { FooterComponent } from './footer/footer.component';
 import { TodoListComponent } from './todo-list/todo-list.component';
-import { ProductCardComponent } from './product/product-list/product-card/product-card.component';
+import { ProductCardComponent } from './product/product-card/product-card.component';
 import { FavoriteProductComponent } from './product/favorite-product/favorite-product.component';
 import { ProductListComponent } from './product/product-list/product-list.component';
+import { StringSlicePipe } from './string-slice.pipe';
+import { ProductDetailsproductDetailsComponent } from './pruduct/product-detailsproduct-details/product-detailsproduct-details.component';
+import { ProductDetailsComponent } from './product/product-details/product-details/product-details.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +29,9 @@ import { ProductListComponent } from './product/product-list/product-list.compon
     ProductCardComponent,
     FavoriteProductComponent,
     ProductListComponent,
+    StringSlicePipe,
+    ProductDetailsproductDetailsComponent,
+    ProductDetailsComponent,
   ],
   imports: [BrowserModule],
   providers: [],

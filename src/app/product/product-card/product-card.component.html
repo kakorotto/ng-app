@@ -1,0 +1,23 @@
+<div class="card">
+  <img class="card-img-top" src="{{prodData?.image}}" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title" [routerLink]="['/productdetails',prodData?.id]" style="cursor: pointer">{{prodData?.title}}
+    </h5>
+    <h6 class="card-subtitle mb-2 text-muted">{{prodData?.price}}</h6>
+
+    <div *ngIf="showDetails; then short else long"></div>
+    <ng-template #short>
+      <p class="card-text">
+        {{prodData?.description! |stringSlice:0:30}}
+      </p>
+      <button type="button" (click)="addToCart(prodData!)">Buy</button>
+    </ng-template>
+    <ng-template #long>
+      <p class="card-text" #long>
+        {{prodData?.description}}
+      </p>
+      <a [routerLink]="['/productlist']" class="card-link" [hidden]="!showDetails">Back</a>
+    </ng-template>
+
+  </div>
+</div>
