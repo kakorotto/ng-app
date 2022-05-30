@@ -13,8 +13,11 @@ import { ProductCardComponent } from './product/product-card/product-card.compon
 import { FavoriteProductComponent } from './product/favorite-product/favorite-product.component';
 import { ProductListComponent } from './product/product-list/product-list.component';
 import { StringSlicePipe } from './string-slice.pipe';
-import { ProductDetailsproductDetailsComponent } from './pruduct/product-detailsproduct-details/product-detailsproduct-details.component';
-import { ProductDetailsComponent } from './product/product-details/product-details/product-details.component';
+import { ProductDetailsComponent } from './product/product-details/product-details.component';
+import { UserDetailsComponent } from './user/user-details/user-details.component';
+import { AllPhotosComponent } from './all-photos/all-photos.component';
+import { LoginComponent } from './login/login.component';
+import { AddProductComponent } from './product/add-product/add-product.component';
 
 @NgModule({
   declarations: [
@@ -30,8 +33,11 @@ import { ProductDetailsComponent } from './product/product-details/product-detai
     FavoriteProductComponent,
     ProductListComponent,
     StringSlicePipe,
-    ProductDetailsproductDetailsComponent,
     ProductDetailsComponent,
+    UserDetailsComponent,
+    AllPhotosComponent,
+    LoginComponent,
+    AddProductComponent,
   ],
   imports: [BrowserModule],
   providers: [],
